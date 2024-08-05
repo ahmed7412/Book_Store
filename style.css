@@ -1,0 +1,352 @@
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+ 	font-family: 'Ubuntu', sans-serif;
+ 	padding: 0;
+ 	margin: 0;
+ 	box-sizing:border-box;
+ }
+
+     /* all links in the body*/
+ a{
+ 	color: black;
+ 	text-decoration: none;
+ }
+
+body{
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+    background-image: url('E:/Book_Store/imges/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+   /* Main div */
+.container {
+	width: 80%;
+	flex: 1;
+}
+         /* the navbar styles*/
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+.logo {
+	font-size: 30px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+.logo img{
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+ul{
+	width: 40%;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+}
+ul a{
+	border-bottom: 2px solid transparent;
+}
+ul a:hover{
+	border-block-color: black;
+}
+@media screen and (max-width: 768px){
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	ul{
+		width: 100%;
+		justify-content: space-around;
+		margin-top: 10px;
+	}
+}
+    /* the end of the navbar styles*/
+
+
+        /* title & welcoming sectin styles*/
+    /* first div content*/    
+.content{
+	width: 100%;
+	margin: 50px auto;
+	padding: 30px;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+.content .p1{
+	font-size: 50px;
+}
+.content .p2{
+	font-size: 30px;
+}
+
+@media(min-width:768px){
+	.content{
+		width: 50%;
+		margin: 50px auto;
+	}
+}
+
+
+/* second div content2*/
+.content2{
+	position: relative;
+	padding: 30px;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:  flex-start;
+	flex-wrap: wrap;
+	width:100% ;
+}
+.content2 h2{
+	font-family: 'Permanent Marker', cursive;
+    
+	width: 60%;
+	text-align: left;
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+.content2 p{
+	width: 55%;
+	text-align: left;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.content2 img {
+	width: 30%;
+	height: auto;
+	margin-top: -120px;
+	margin-bottom: 15%;
+}
+@media screen and (max-width: 600px){
+	.content2 img {
+		width: 100%;
+		margin-bottom: 0;
+		margin-top: 0;
+
+	}
+}
+       /* the end of title & welcoming sectin styles*/
+  
+
+         /* The Best sillings "responsive card" section styles*/
+.content3{
+	padding:0;
+}
+.content3 .head {
+	font-size: 40px;
+	text-align: center;
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+.wrapper{
+	padding: 10px 5%;
+}
+.box_area{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
+	margin-top: 50px;
+}
+.box{
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.box img{
+	width: 100%;
+	border-radius: 10px;
+	display: block;
+	transition: transform 0.5s;
+}
+.overlay{
+	height: 0;
+	width: 100%;
+	background: linear-gradient(transparent,#1c1c1c 58%);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	font-size: 14px;
+	transition: height 0.5s;
+}
+.overlay h3{
+	font-weight: 500;
+	margin-bottom: 5px;
+	color: #fff;
+	margin-top: 80%;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+.overlay p{
+	color: #fff;
+}
+.overlay a{
+	margin-top: 10px;
+	color: #262626;
+	text-decoration: none;
+	font-size: 14px;
+	background: #fff;
+	border-radius: 50px;
+	text-align: center;
+	padding: 5px 15px;
+}
+.box:hover img{
+	transform: scale(1.2);
+}
+.box:hover .overlay{
+	height: 100%;
+}
+
+.btn {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+.btn button{
+	position: relative;
+	color: #000;
+	width: 30%;
+	height: 50px;
+	padding: 10px 25px;
+	font-weight: 500;
+	font-size: 30px;
+	background: transparent;
+	border: 3px solid #000;
+	cursor: pointer;
+	z-index: 1;
+	
+}
+.btn button:hover{
+	color: #fff;
+	background: #000;
+	transition: 0.3s;
+}
+/*  additional adjustments for responsiveness*/
+@media (max-width: 768px){
+	.content3 .head{
+		font-size: 30px;
+	}
+	.box_area {
+		grid-template-columns: 1fr; /*  display one column on smaller screen*/
+	}
+	.box {
+		margin-bottom: 20px;
+	}
+	.btn button {
+		font-size: 15px;
+	}
+}
+
+
+               /*  the end of The Best sillings "responsive card" section styles*/
+
+                         /*  the footer styles */
+
+footer{
+	background-color:#111;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+.footercontainer {
+	width: 100%;
+	padding: 70px 30px 20px;
+}
+.socialicons {
+	display: flex;
+	justify-content: center;
+}
+.socialicons .footerlink {
+	text-decoration: none;
+	padding: 10px;
+	background-color: white ;
+	margin: 15px;
+	border-radius: 50%;
+}
+.socialicons .footerlink i{
+	font-size: 2em;
+	color: #111;
+	opacity: 0.9;
+}
+.socialicons .footerlink:hover{
+	background-color: #111;
+	transition: 0.5s;
+}
+.socialicons .footerlink:hover i{
+    color: white;
+	transition: 0.5s;
+}
+.footernav {
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+}
+.footernav ul{
+	display: flex;
+	justify-content: space-between;
+}
+ .footernav ul li .footerlink2{
+ 	color: white;
+ 	margin: 20px;
+ 	text-decoration: none;
+ 	font-size: 1.3em;
+ 	opacity: 0.7;
+ 	transition: 0.5s;
+ }
+ .footernav ul li .footerlink2:hover{
+ 	opacity: 1;
+ }
+ .footerbottom {
+ 	background-color: #000;
+ 	padding: 20px;
+ 	text-align: center;
+ }
+ .footerbottom p{
+ 	color: white;
+ }
+ .designer {
+ 	opacity: 0.7;
+ 	text-transform: uppercase;
+ 	letter-spacing: 1px;
+ 	font-weight: 400;
+ 	margin: 0 5px;
+ }
+ @media (max-width: 700px){
+ 	.footernav ul{
+ 		flex-direction: column;
+ 	}
+ 	.footernav ul li{
+ 		width: 100%;
+ 		text-align: center;
+ 		margin: 10px;
+ 	}
+ }
+                                 /*  the end of footer styles */
